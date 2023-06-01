@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>视频不能播放的问题</title>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .mask {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    height: 360px;
+    width: 640px;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+
+  .on {
+    visibility: visible;
+
+  }
+
+  button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+    </style>
+    <body>
+        <video
+            src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+            id="video"
+            controls=""
+            autoplay
+        ></video>
+        <div class="mask">
+            <button id="btn">打开声音</button>
+        </div>
+        <script src="./index.js "></script>
+    </body>
+</html>
